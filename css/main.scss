@@ -214,6 +214,9 @@ header {
       font-size: 28px;
       color: #fff;
       width: 400px;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 }
@@ -222,11 +225,18 @@ header {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 50px 0;
+  }
   img {
     position: relative;
     bottom: 90px;
     width: 30vw;
+    @media (max-width: 768px) {
+      width: 100%;
+      bottom: 0;
+    }
   }
   .text {
     padding: 5%;
@@ -235,9 +245,19 @@ header {
     position: relative;
     right: 40%;
     height: auto;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+    @media (max-width: 768px) {
+      right: 0;
+    }
     p {
       padding: 1% 0;
+
       width: 80%;
+      @media (max-width: 768px) {
+        padding: 0;
+      }
     }
   }
 }
@@ -251,6 +271,10 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
 
   grid-template-areas: " gallery-text gallery-text item" "item2 item3 item4";
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "gallery-text" "item" "item2" "item3" "item4";
+  }
   .gallery-item {
     grid-area: item;
     overflow: hidden;
