@@ -132,6 +132,13 @@ header {
       @media (max-width: 768px) {
         display: none;
       }
+      .language {
+        position: absolute;
+        right: 0;
+        @media (max-width: 768px) {
+          position: relative;
+        }
+      }
       &.showing {
         display: flex;
         flex-direction: column;
@@ -200,13 +207,31 @@ header {
 .banner {
   height: 500px;
   background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.47),
-      rgba(0, 0, 0, 0)
-    ),
-    url(../images/banner.png);
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.47),
+    rgba(0, 0, 0, 0)
+  );
+
+  overflow: hidden;
   background-size: cover;
+  #myVideo {
+    width: 100%;
+
+    z-index: -1;
+    position: relative;
+
+    transform: translateY(-25%);
+    @media only screen and (max-width: 1400px) {
+      transform: translateY(-10%);
+    }
+    @media only screen and (max-width: 768px) {
+      transform: translateY(0%);
+      height: 100%;
+      width: auto;
+      transform: translateX(-30%);
+    }
+  }
   .container {
     position: relative;
     p {
@@ -346,6 +371,7 @@ header {
 .contact {
   padding: 80px 0;
   display: flex;
+  height: 60vh;
   flex-direction: column;
   &.full {
     padding: 150px 0;
@@ -405,7 +431,7 @@ footer {
       order: 3;
     }
     img {
-      order: 1;
+      order: 2;
       width: 4vw;
       object-fit: contain;
       @media (max-width: 768px) {
@@ -413,10 +439,11 @@ footer {
       }
     }
     .social {
-      order: 2;
-      color: #000;
+      order: 1;
+      color: #4267b2;
       i {
         padding: 0 10px;
+        font-size: 30px;
         @media (max-width: 768px) {
           font-size: 24px;
           padding: 25px;
