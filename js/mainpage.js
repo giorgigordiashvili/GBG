@@ -1,12 +1,16 @@
-$(document).ready(function(){
-    $(this).scrollTop(0);
-});
-$(window).on("scroll", function () {
-  if ($(window).scrollTop() > 450) {
-    $("header").addClass("black");
-    $("#logo").attr("src", "./images/logo-black.png");
+document.addEventListener('DOMContentLoaded', function () {
+  window.scrollTo(0, 0)
+})
+
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header')
+  const logo = document.getElementById('logo')
+
+  if (window.scrollY > 450) {
+    header.classList.add('black')
+    logo.src = './images/logo-black.png'
   } else {
-    $("header").removeClass("black");
-    $("#logo").attr("src", "./images/logo.png");
+    header.classList.remove('black')
+    logo.src = './images/logo.png'
   }
-});
+})

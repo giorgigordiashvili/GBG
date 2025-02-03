@@ -22,10 +22,10 @@
           <ul>
             <i class="fa fa-times"></i>
             <li><a class="active" href="index.html">მთავარი</a></li>
-            <li><a href="about.html">ჩვენ შესახებ</a></li>
-            <li><a href="gallery.html">გალერეა</a></li>
-            <li><a href="products.html">ჩვენი პროდუქცია</a></li>
-            <li><a href="contact.html">კონტაქტი</a></li>
+            <li><a href="#">ჩვენ შესახებ</a></li>
+            <li><a href="#">გალერეა</a></li>
+            <li><a href="#">ჩვენი პროდუქცია</a></li>
+            <li><a href="#">კონტაქტი</a></li>
           </ul>
         </nav>
         <div class="hide-mobile"></div>
@@ -33,9 +33,9 @@
     </header>
     <section class="banner">
       <video autoplay muted loop id="myVideo">
-  <source src="images/render.m4v" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+        <source src="./images/render.m4v" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
       <div class="container">
         <p>GBG კომპანიამ დიდი მასშტაბის ინვესტიციების განხორციელება დაიწყო</p>
       </div>
@@ -110,19 +110,26 @@
       <h2>კონტაქტი</h2>
       <div class="grid">
         <div class="text">
-          <p><i class="fa fa-map-marker"></i>სულ.ცინცაძის #58</p>
-          <p><i class="fa fa-mobile"></i>+995 322 43 34 23</p>
-          <p><i class="fa fa-envelope"></i>vacancy@heidelbergcement.ge</p>
+          <p><i class="fa fa-map-marker"></i>მისამართი</p>
+          <p><i class="fa fa-mobile"></i>+995 322 22 22 22</p>
+          <p><i class="fa fa-envelope"></i>info@saiti.ge</p>
         </div>
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190556.0740243622!2d44.69876866055816!3d41.73263040567097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2z4YOX4YOR4YOY4YOa4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1599379207146!5m2!1ska!2sge"
-            frameborder="0"
-            style="border: 0"
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
+        <div class="contact-form">
+          <form id="contactForm">
+            <label for="name">სახელი:</label>
+            <input type="text" id="name" name="name" required />
+            <span class="error" id="nameError"></span>
+
+            <label for="email">ელ.ფოსტა:</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error" id="emailError"></span>
+
+            <label for="message">ტექსტი:</label>
+            <textarea id="message" name="message" required></textarea>
+            <span class="error" id="messageError"></span>
+
+            <button type="submit" class="main-button">გაგზავნა</button>
+          </form>
         </div>
       </div>
     </section>
@@ -136,8 +143,9 @@
         </div>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="js/mainpage.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/mainpage.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/products.js"></script>
   </body>
 </html>
